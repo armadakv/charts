@@ -1,5 +1,11 @@
 # Changelog
 ---
+## v0.3.1
+
+### Improvements
+* Remove the `replication.maxSnapshotRecvBytesPerSecond` value and the `--replication.max-snapshot-recv-bytes-per-second` flag, which is no longer supported by the armada server (follower mode failed to start).
+
+---
 ## v0.3.0
 
 ### Improvements

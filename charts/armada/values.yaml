@@ -273,10 +273,6 @@ replication:
   # Note: Applicable only if the Armada mode is follower (`mode: follower`)
   leaderAddress: "leader.armada.example.com"
 
-  # -- maxSnapshotRecvBytesPerSecond: Maximum number of bytes received per second by the snapshot API client,
-  #   default value 0 means unlimited.
-  maxSnapshotRecvBytesPerSecond: 0
-
   # -- logRpcTimeout: The log RPC timeout.
   logRpcTimeout: 5m
 
