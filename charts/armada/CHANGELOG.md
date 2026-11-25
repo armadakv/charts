@@ -1,5 +1,12 @@
 # Changelog
 ---
+## v0.3.2
+
+### Improvements
+* Bump to v0.3.1 armada server version (fixes follower recovery without a shared snapshot store).
+* Add `serviceAccount.annotations`, e.g. for IRSA access to an S3 shared store.
+
+---
 ## v0.3.1
 
 ### Improvements
