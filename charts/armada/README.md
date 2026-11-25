@@ -83,7 +83,6 @@ Kubernetes: `>= 1.21.0`
 | replicas | int | `1` | replicas: Defines number of Armada replicas   Note: This value must match the number of raft initial members `raft.initialMembers`. |
 | replication.leaderAddress | string | `"leader.armada.example.com"` | leaderAddress: The address of the leader to replicate from Note: Applicable only if the Armada mode is follower (`mode: follower`) |
 | replication.logRpcTimeout | string | `"5m"` | logRpcTimeout: The log RPC timeout. |
-| replication.maxSnapshotRecvBytesPerSecond | int | `0` | maxSnapshotRecvBytesPerSecond: Maximum number of bytes received per second by the snapshot API client,   default value 0 means unlimited. |
 | replication.server | object | `{"enabled":false,"externalDomain":"leader.armada.example.com","port":8444,"service":{"annotations":{},"clusterIP":"","externalTrafficPolicy":"Cluster","type":"LoadBalancer"}}` | server: The replication server may be used when Armada is in the leader mode (`mode: leader`).   Follower Armada replicates data from this server. |
 | replication.server.enabled | bool | `false` | enabled: Enables the replication server |
 | replication.server.externalDomain | string | `"leader.armada.example.com"` | externalDomain: |
