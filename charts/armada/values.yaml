@@ -105,6 +105,8 @@ serviceAccount:
   create: true
   # -- name: ServiceAccount name override, default: `"armada.fullname"`
   name: ""
+  # -- annotations: ServiceAccount annotations, e.g. `eks.amazonaws.com/role-arn` for IRSA access to an S3 shared store.
+  annotations: {}
 
 # Pod security context configuration
 # -- podSecurityContext: The full content of the spec.securityContext

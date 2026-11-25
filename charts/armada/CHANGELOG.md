@@ -1,5 +1,11 @@
 # Changelog
 ---
+## v0.3.2
+
+### Improvements
+* Add `serviceAccount.annotations`, e.g. for IRSA access to an S3 shared store.
+
+---
 ## v0.3.1
 
 ### Improvements
