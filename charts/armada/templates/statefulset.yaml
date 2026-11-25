@@ -115,7 +115,6 @@ spec:
         - "--replication.enabled={{ .Values.replication.server.enabled }}"
         {{- if .Values.replication.server.enabled }}
         - "--replication.address=https://$(POD_IP):{{ .Values.replication.server.port }}"
-        - "--replication.log-cache-size={{ .Values.replication.logCacheSize }}"
         {{- end }}
         {{- end }}
         {{- if eq .Values.mode "follower" }}

@@ -45,7 +45,7 @@ Kubernetes: `>= 1.21.0`
 | fullnameOverride | string | `""` | fullnameOverride: String to fully override `"armada.fullname"` |
 | image.imagePullPolicy | string | `"IfNotPresent"` | imagePullPolicy: ref: https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy |
 | image.repository | string | `"ghcr.io/armadakv/armada"` | repository: Default image repository |
-| image.tag | string | `"v0.1.0"` | tag: Override to use different image version |
+| image.tag | string | `"v0.3.0"` | tag: Override to use different image version |
 | imagePullSecrets | list | `[]` | imagePullSecrets: For the Armada image |
 | maintenance.enabled | bool | `false` | enabled: Maintenance API enabled |
 | maintenance.token | object | `{"secretKind":"plaintext","value":"secret-token"}` | token:   Depending on value of `secretKind`     - sealedSecret: enter the encrypted value     - plaintext: enter the plaintext secret value     - none: the field is ignored |
@@ -82,7 +82,6 @@ Kubernetes: `>= 1.21.0`
 | readinessProbe | object | `{"failureThreshold":3,"initialDelaySeconds":5,"periodSeconds":30,"successThreshold":1,"timeoutSeconds":5}` | startupProbe: Defines the readinessProbe for the Armada container # ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes |
 | replicas | int | `1` | replicas: Defines number of Armada replicas   Note: This value must match the number of raft initial members `raft.initialMembers`. |
 | replication.leaderAddress | string | `"leader.armada.example.com"` | leaderAddress: The address of the leader to replicate from Note: Applicable only if the Armada mode is follower (`mode: follower`) |
-| replication.logCacheSize | int | `0` | logCacheSize: The replication server log cache size. 0 means the cache is turned off. |
 | replication.logRpcTimeout | string | `"5m"` | logRpcTimeout: The log RPC timeout. |
 | replication.maxSnapshotRecvBytesPerSecond | int | `0` | maxSnapshotRecvBytesPerSecond: Maximum number of bytes received per second by the snapshot API client,   default value 0 means unlimited. |
 | replication.server | object | `{"enabled":false,"externalDomain":"leader.armada.example.com","port":8444,"service":{"annotations":{},"clusterIP":"","externalTrafficPolicy":"Cluster","type":"LoadBalancer"}}` | server: The replication server may be used when Armada is in the leader mode (`mode: leader`).   Follower Armada replicates data from this server. |
