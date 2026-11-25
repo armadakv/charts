@@ -15,4 +15,4 @@ icon: "https://github.com/armadakv/armada/blob/master/docs/static/armada.png"
 kubeVersion: ">= 1.25.0-0"
 type: application
 version: 0.3.2
-appVersion: "0.3.0"
+appVersion: "0.3.1"

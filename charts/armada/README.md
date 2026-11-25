@@ -45,7 +45,7 @@ Kubernetes: `>= 1.21.0`
 | fullnameOverride | string | `""` | fullnameOverride: String to fully override `"armada.fullname"` |
 | image.imagePullPolicy | string | `"IfNotPresent"` | imagePullPolicy: ref: https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy |
 | image.repository | string | `"ghcr.io/armadakv/armada"` | repository: Default image repository |
-| image.tag | string | `"v0.3.0"` | tag: Override to use different image version |
+| image.tag | string | `"v0.3.1"` | tag: Override to use different image version |
 | imagePullSecrets | list | `[]` | imagePullSecrets: For the Armada image |
 | maintenance.enabled | bool | `false` | enabled: Maintenance API enabled |
 | maintenance.token | object | `{"secretKind":"plaintext","value":"secret-token"}` | token:   Depending on value of `secretKind`     - sealedSecret: enter the encrypted value     - plaintext: enter the plaintext secret value     - none: the field is ignored |
