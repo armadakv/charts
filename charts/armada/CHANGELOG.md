@@ -1,6 +1,6 @@
 # Changelog
 ---
-## v0.2.0
+## v0.3.0
 
 ### Improvements
 * Bump to v0.3.0 armada server version.
@@ -98,7 +98,7 @@
 * Added auto-generation of TLS certificates for better quickstart experience.
 
 ---
-## v0.2.0
+## v0.3.0
 
 ### Improvements
 * Support of v0.2.x series of Armada
