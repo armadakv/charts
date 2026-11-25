@@ -2,6 +2,28 @@ apiVersion: v1
 entries:
   armada:
   - apiVersion: v2
+    appVersion: 0.3.0
+    created: "2026-11-25T11:22:49.390137319Z"
+    description: 'Armada is a distributed key-value store. Armada is designed as easy
+      to deploy, kubernetes friendly with emphasis on high read throughput and low
+      operational cost. '
+    digest: bbd91c5eedae38f4c9369752256229ef759f470f804c83084a72b70c4ff5b4b6
+    home: https://armadakv.io
+    icon: https://github.com/armadakv/armada/blob/master/docs/static/armada.png
+    keywords:
+    - Armada
+    - database
+    - key-value
+    kubeVersion: '>= 1.25.0-0'
+    maintainers:
+    - name: coufalja
+    - name: jsfpdn
+    name: armada
+    type: application
+    urls:
+    - https://github.com/armadakv/charts/releases/download/armada-0.3.0/armada-0.3.0.tgz
+    version: 0.3.0
+  - apiVersion: v2
     appVersion: 0.1.0
     created: "2026-08-29T06:40:33.754222521Z"
     description: 'Armada is a distributed key-value store. Armada is designed as easy
@@ -94,4 +116,4 @@ entries:
     urls:
     - https://github.com/armadakv/armada-helm/releases/download/armada-backup-0.1.1/armada-backup-0.1.1.tgz
     version: 0.1.1
-generated: "2026-08-29T06:40:33.90338589Z"
+generated: "2026-11-25T11:22:49.390154871Z"
