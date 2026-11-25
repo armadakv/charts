@@ -5,7 +5,7 @@
 ### Improvements
 * Bump to v0.3.0 armada server version.
 * Allow installation on Kubernetes versions with a pre-release suffix (e.g. EKS `v1.32.x-eks-...`).
-* Only render `externalTrafficPolicy` on the replication service when set, allowing `ClusterIP` service type.
+* Only render `externalTrafficPolicy` on the replication service for `LoadBalancer`/`NodePort` types, allowing `ClusterIP` service type without clearing the policy.
 
 ### Breaking changes
 * Remove the `replication.logCacheSize` value and the `--replication.log-cache-size` flag, which is no longer supported by the armada server.
