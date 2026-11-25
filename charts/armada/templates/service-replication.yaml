@@ -13,7 +13,9 @@ metadata:
   {{ end }}
 spec:
   type: {{ .Values.replication.server.service.type }}
+  {{- if .Values.replication.server.service.externalTrafficPolicy }}
   externalTrafficPolicy: {{ .Values.replication.server.service.externalTrafficPolicy }}
+  {{- end }}
   selector:
     {{- include "armada.selectorLabels" . | nindent 6 }}
   ports:
