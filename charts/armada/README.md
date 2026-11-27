@@ -45,7 +45,7 @@ Kubernetes: `>= 1.21.0`
 | fullnameOverride | string | `""` | fullnameOverride: String to fully override `"armada.fullname"` |
 | image.imagePullPolicy | string | `"IfNotPresent"` | imagePullPolicy: ref: https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy |
 | image.repository | string | `"ghcr.io/armadakv/armada"` | repository: Default image repository |
-| image.tag | string | `"v0.3.1"` | tag: Override to use different image version |
+| image.tag | string | `"v0.4.0"` | tag: Override to use different image version |
 | imagePullSecrets | list | `[]` | imagePullSecrets: For the Armada image |
 | maintenance.enabled | bool | `false` | enabled: Maintenance API enabled |
 | maintenance.token | object | `{"secretKind":"plaintext","value":"secret-token"}` | token:   Depending on value of `secretKind`     - sealedSecret: enter the encrypted value     - plaintext: enter the plaintext secret value     - none: the field is ignored |
@@ -78,7 +78,6 @@ Kubernetes: `>= 1.21.0`
 | raft.port | int | `5012` | port: Port number for internal communication, cannot be changed after cluster startup. |
 | raft.rtt | string | `"50ms"` | rtt: Defines the average Round Trip Time (RTT) between two NodeHost instances.   Such an RTT interval is internally used as a logical clock tick, Raft heartbeat and election intervals   are both defined in terms of how many such RTT intervals. Note that RTTMillisecond is the combined delays   between two NodeHost instances including all delays caused by network transmission,   delays caused by NodeHost queuing and processing.   Specified as Go's duration string (https://pkg.go.dev/maze.io/x/duration#ParseDuration). |
 | raft.snapshotEntries | int | `10000` | snapshotEntries: SnapshotEntries defines how often the state machine should be snapshotted automatically.   It is defined in terms of the number of applied Raft log entries. |
-| raft.snapshotRecoveryType | string | `"checkpoint"` | snapshotRecoveryType is the implementation of internal Raft snapshotting mechanism. Options are snapshot (legacy) or checkpoint (default). |
 | readinessProbe | object | `{"failureThreshold":3,"initialDelaySeconds":5,"periodSeconds":30,"successThreshold":1,"timeoutSeconds":5}` | startupProbe: Defines the readinessProbe for the Armada container # ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/#define-readiness-probes |
 | replicas | int | `1` | replicas: Defines number of Armada replicas   Note: This value must match the number of raft initial members `raft.initialMembers`. |
 | replication.leaderAddress | string | `"leader.armada.example.com"` | leaderAddress: The address of the leader to replicate from Note: Applicable only if the Armada mode is follower (`mode: follower`) |
