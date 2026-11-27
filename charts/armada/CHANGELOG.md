@@ -1,5 +1,14 @@
 # Changelog
 ---
+## v0.4.0
+
+### Improvements
+* Bump to v0.4.0 armada server version (fixes GC on follower clusters and writes after a restore from backup).
+
+### Breaking changes
+* Remove the `raft.snapshotRecoveryType` value and the `--raft.snapshot-recovery-type` flag, which the armada server no longer supports: replicas always exchange checkpoint snapshots. A cluster still using the `snapshot` type must switch to `checkpoint` before upgrading.
+
+---
 ## v0.3.2
 
 ### Improvements

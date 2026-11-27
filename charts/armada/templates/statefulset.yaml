@@ -77,7 +77,6 @@ spec:
         - "--api.cert-filename=/api-cert/tls.crt"
         - "--api.key-filename=/api-cert/tls.key"
         - "--rest.address=http://0.0.0.0:{{ .Values.metricsPort }}"
-        - "--raft.snapshot-recovery-type={{ .Values.raft.snapshotRecoveryType }}"
         - "--raft.address=$(POD_NAME).{{ template "armada.name" . }}.{{ .Release.Namespace }}.svc.cluster.local:{{ .Values.raft.port }}"
         - "--raft.listen-address=0.0.0.0:{{ .Values.raft.port }}"
         - "--raft.node-host-dir=/data/raft"

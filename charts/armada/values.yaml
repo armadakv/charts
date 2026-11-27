@@ -13,7 +13,7 @@ image:
   # -- imagePullPolicy: ref: https://kubernetes.io/docs/concepts/containers/images/#image-pull-policy
   imagePullPolicy: IfNotPresent
   # -- tag: Override to use different image version
-  tag: v0.3.1
+  tag: v0.4.0
 
 # -- imagePullSecrets: For the Armada image
 imagePullSecrets: []
@@ -380,9 +380,6 @@ raft:
   #   further replication messages will be dropped to restrict memory usage.
   #   When set to 0, it means the send queue size is unlimited.
   maxSendQueueSize: 0
-
-  # --  snapshotRecoveryType is the implementation of internal Raft snapshotting mechanism. Options are snapshot (legacy) or checkpoint (default).
-  snapshotRecoveryType: checkpoint
 
 # Temp folder configuration
 temp:
